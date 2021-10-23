@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+  <title>MadeByZiling</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      background: #FFFAF0;
+    }
+
+    #des {
+      background: #FFC0CB;
+      height: 300px;
+      width: 150px;
+      border: solid #FFC0CB 2px ;
+      border-radius: 300px 0 0 300px;
+      box-shadow: 0 0 10px #B22222;
+      position: relative;
+    }
+
+    #des::after {
+      content: 'Designer';
+      position: absolute;
+      top: 125px;
+      left: 15px;
+      color: white;
+      font-size: 2rem ;
+    }
+
+    #cod {
+      background: #DCDCDC;
+      height: 300px;
+      width: 150px;
+      border-radius: 0 300px 300px 0;
+      border: solid #DCDCDC 2px ;
+      box-shadow: 0 0 10px gray;
+      position: relative;
+    }
+
+    #cod::after {
+      content: 'Coder';
+      position: absolute;
+      text-align: center;
+      top: 125px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 2rem ;
+    }
+
+    .card {
+      width: 270px;
+      height: 320px;
+      border: solid gray 1px;
+      border-radius: 5%;
+    }
+
+    #tit {
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 182, 193, 0.5);
+      position: absolute;
+      right: 15%;
+      top: 20%;
+    }
+
+    #abg {
+      width: 250px;
+      height: 50px;
+      background: rgba(173, 216, 230, 0.5);
+      position: absolute;
+      left: 12%;
+      top: 10%;
+    }
+
+    #skill {
+      position: relative;
+    }
+
+    #sbg {
+      width: 250px;
+      height: 50px;
+      background: rgba(102, 205, 170, 0.5);
+      position: absolute;
+      top: 3%;
+      left: 2%;
+    }
+
+    .cards {
+      margin: 0.5rem;
+      border: none;
+      height: 230px;
+    }
+
+    .bts {
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      transform: translateX(-50%);
+      font-size: 10px;
+    }
+
+    #ex {
+      position: relative;
+    }
+
+    #ebg {
+      width: 250px;
+      height: 50px;
+      background: rgba(255, 160, 122, 0.5);
+      position: absolute;
+      top: 20px;
+      left: 2%;
+    }
+
+    #box {
+      margin-top: 3%;
+    }
+
+    .img {
+      width: max-content;
+    }
+
+    .copyright {
+      background: #FFE4B5;
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem 0 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="col" id="tit">
+    <h4>I'm a web frontend engineer based in New Taipie City, Taiwan.</h4>
+  </div>
+  <div class="container">
+    <div class="row vh-100" id="ab">
+      <div class="col" id="abg"></div>
+      <div class="col-12 mt-5">
+        <h1>About Me。</h1>
+      </div>
+      <div class="col-6">
+        <p>Name</p>
+        <p>Age</p>
+        <p>Email</p>
+        <p>Phone</p>
+        <p>Eduction</p>
+      </div>
+      <div class="col-6">
+        <p>Nellie chen | 陳姿菱</p>
+        <p>26</p>
+        <p>s96172398@gmail.com</p>
+        <p>0975516853</p>
+        <p>亞東技術學院｜材料與纖維學系</p>
+      </div>
+    </div>
+    <div class="row vh-100" id="skill">
+      <div class="col" id="sbg"></div>
+      <div class="col-12">
+        <h1>Skills</h1>
+      </div>
+      <div class="col-3 ml-5">
+        <h3>Part designer</h3>
+        <li>Illustrator</li>
+        <li>Photoshop</li>
+        <li>Figma</li>
+        <li>Sketch</li>
+      </div>
+      <span id="des" class="ml-5"></span>
+      <span id="cod" class="ml-5"></span>
+      <div class="col-3 ml-5">
+        <h3>Part coder</h3>
+        <li>Html5</li>
+        <li>Css3</li>
+        <li>Vue.js</li>
+        <li>Bootstrap</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+      </div>
+    </div>
+    <div class="row" id="ex">
+      <div class="col" id="ebg"></div>
+      <div class="col-12">
+        <h1>Portfolio</h1>
+      </div>
+    </div>
+    <div class="row justify-content-around" id="box">
+      <!-- game1 -->
+      <div class="card cards">
+        <img src="./img/cardgame.png" class="card-img-top">
+        <div class="card-body">
+          <a href="https://zilingchen.github.io/matching-game/" class="btn bts btn-outline-info">Matching Game</a>
+          </p>
+        </div>
+      </div>
+      <!-- game2 -->
+      <div class="card cards">
+        <img src="./img/mario-game.png" class="card-img-top">
+        <div class="card-body">
+          <a href="https://zilingchen.github.io/mario-game/" class="btn bts btn-outline-info">Mario Game</a>
+          </p>
+        </div>
+      </div>
+      <!-- game3 -->
+      <div class="card cards">
+        <img src="./img/shot-game.png" class="card-img-top">
+        <div class="card-body">
+          <a href="https://zilingchen.github.io/shotting-game/" class="btn bts btn-outline-info">Shotting Game</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">個人作品網 &copy; ZiLing Chen</div>
+  
+  <script src="./jquery-3.6.0.min.js"></script>
+  <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
