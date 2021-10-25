@@ -132,94 +132,188 @@
       margin-top: 2rem;
       padding: 1rem 0 1rem 0;
     }
+
+  @media (max-width: 576px){
+    body {
+      height: 100vh;
+    }
+    
+    #des {
+      display: none;
+      height: 100px;
+      width: 50px;
+      border-radius: 100px 0 0 100px;
+      position: relative;
+    }
+
+    #des::after {
+      content: 'Designer';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: small;
+      color: black;
+    }
+    #cod {
+      display: none;
+      height: 100px;
+      width: 50px;
+      border-radius: 0 100px 100px 0;
+      position: relative;
+    }
+    #cod::after {
+      content: 'Coder';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: black;
+      font-size: small ;
+    }
+    #AM {
+      position: relative;
+    }
+    #abg {
+      width: 250px;
+      height: 2px;
+      background: rgba(173, 216, 230, 1);
+      position: absolute;
+      top: 13%;
+      left: 6%;
+    }
+    #sbg {
+      width: 250px;
+      height: 2px;
+      background: rgba(102, 205, 170, 1);
+      position: absolute;
+      top: 6%;
+      left: 3%;
+    }
+    #ebg {
+      width: 250px;
+      height: 2px;
+      background: rgba(255, 160, 122, 1);
+      position: absolute;
+      top: 73%;
+      left: 3%;
+    }
+    #tit {
+      width: 350px;
+      height: 100px;
+      background: rgba(255, 182, 193, 0.5);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: left;
+    }
+    .col-6>p {
+      text-align: left;
+    }
+    #des-text {
+      display: inline-block;
+    }
+    .col-3 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .card {
+      margin-bottom: 3%;
+      background: #F5F5F5;
+    }
+
+  }
+
   </style>
 </head>
 <body>
-  <div class="col" id="tit">
-    <h4>I'm a web frontend engineer based in New Taipie City, Taiwan.</h4>
-  </div>
   <div class="container">
-    <div class="row vh-100" id="ab">
-      <div class="col" id="abg"></div>
-      <div class="col-12 mt-5">
-        <h1>About Me。</h1>
-      </div>
-      <div class="col-6">
-        <p>Name</p>
-        <p>Age</p>
-        <p>Email</p>
-        <p>Phone</p>
-        <p>Eduction</p>
-      </div>
-      <div class="col-6">
-        <p>Nellie chen | 陳姿菱</p>
-        <p>26</p>
-        <p>s96172398@gmail.com</p>
-        <p>0975516853</p>
-        <p>亞東技術學院｜材料與纖維學系</p>
-      </div>
+    <div class="col" id="tit">
+      <h4>I'm a web frontend engineer based in New Taipie City, Taiwan.</h4>
     </div>
-    <div class="row vh-100" id="skill">
-      <div class="col" id="sbg"></div>
-      <div class="col-12">
-        <h1>Skills</h1>
-      </div>
-      <div class="col-3 ml-5">
-        <h3>Part designer</h3>
-        <li>Illustrator</li>
-        <li>Photoshop</li>
-        <li>Figma</li>
-        <li>Sketch</li>
-      </div>
-      <span id="des" class="ml-5"></span>
-      <span id="cod" class="ml-5"></span>
-      <div class="col-3 ml-5">
-        <h3>Part coder</h3>
-        <li>Html5</li>
-        <li>Css3</li>
-        <li>Vue.js</li>
-        <li>Bootstrap</li>
-        <li>JavaScript</li>
-        <li>Node.js</li>
-      </div>
-    </div>
-    <div class="row" id="ex">
-      <div class="col" id="ebg"></div>
-      <div class="col-12">
-        <h1>Portfolio</h1>
-      </div>
-    </div>
-    <div class="row justify-content-around" id="box">
-      <!-- game1 -->
-      <div class="card cards">
-        <img src="./img/cardgame.png" class="card-img-top">
-        <div class="card-body">
-          <a href="https://zilingchen.github.io/matching-game/" class="btn bts btn-outline-info">Matching Game</a>
-          </p>
+    <div class="container">
+      <div class="row vh-100" id="ab">
+        <div class="col" id="abg"></div>
+        <div class="col-12 mt-5">
+          <h1 id="AM">About Me。</h1>
+        </div>
+        <div class="col-6">
+          <p>Name</p>
+          <p>Age</p>
+          <p>Email</p>
+          <p>Phone</p>
+          <p>Eduction</p>
+        </div>
+        <div class="col-6">
+          <p>Nellie chen | 陳姿菱</p>
+          <p>26</p>
+          <p>s96172398@gmail.com</p>
+          <p>0975516853</p>
+          <p>亞東技術學院｜材料與纖維學系</p>
         </div>
       </div>
-      <!-- game2 -->
-      <div class="card cards">
-        <img src="./img/mario-game.png" class="card-img-top">
-        <div class="card-body">
-          <a href="https://zilingchen.github.io/mario-game/" class="btn bts btn-outline-info">Mario Game</a>
-          </p>
+      <div class="row vh-100" id="skill">
+        <div class="col" id="sbg"></div>
+        <div class="col-12">
+          <h1>Skills</h1>
+        </div>
+        <div class="col-3 ml-5" id="des-text">
+          <h3>Part designer</h3>
+          <p>Illustrator</p>
+          <p>Photoshop</p>
+          <p>Figma</p>
+          <p>Sketch</p>
+        </div>
+        <span id="des" class="ml-5"></span>
+        <span id="cod" class="ml-5"></span>
+        <div class="col-3 ml-5">
+          <h3>Part coder</h3>
+          <p>Html5</p>
+          <p>Css3</p>
+          <p>Vue.js</p>
+          <p>Bootstrap</p>
+          <p>JavaScript</p>
+          <p>Node.js</p>
         </div>
       </div>
-      <!-- game3 -->
-      <div class="card cards">
-        <img src="./img/shot-game.png" class="card-img-top">
-        <div class="card-body">
-          <a href="https://zilingchen.github.io/shotting-game/" class="btn bts btn-outline-info">Shotting Game</a>
-          </p>
+      <div class="row" id="ex">
+        <div class="col" id="ebg"></div>
+        <div class="col-12">
+          <h1>Portfolio</h1>
         </div>
       </div>
-      <!-- web -->
-      <div class="card cards">
-        <img src="./img/pet.png" class="card-img-top">
-        <div class="card-body">
-          <a href="https://zilingchen.github.io/pet-front/" class="btn bts btn-outline-info">Web</a>
-          </p>
+      <div class="row justify-content-around" id="box">
+        <!-- game1 -->
+        <div class="card cards">
+          <img src="./img/cardgame.png"   class="card-img-top">
+          <div class="card-body">
+            <a href="https://zilingchen.github.io/  matching-game/" class="btn bts  btn-outline-info">Matching Game</a>
+            </p>
+          </div>
+        </div>
+        <!-- game2 -->
+        <div class="card cards">
+          <img src="./img/mario-game.png"   class="card-img-top">
+          <div class="card-body">
+            <a href="https://zilingchen.github.io/  mario-game/" class="btn bts   btn-outline-info">Mario Game</a>
+            </p>
+          </div>
+        </div>
+        <!-- game3 -->
+        <div class="card cards">
+          <img src="./img/shot-game.png"  class="card-img-top">
+          <div class="card-body">
+            <a href="https://zilingchen.github.io/  shotting-game/" class="btn bts  btn-outline-info">Shotting Game</a>
+            </p>
+          </div>
+        </div>
+        <!-- web -->
+        <div class="card cards">
+          <img src="./img/pet.png" class="card-img-top">
+          <div class="card-body">
+            <a href="https://zilingchen.github.io/  pet-front/" class="btn bts  btn-outline-info">Web</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
